@@ -79,7 +79,7 @@ console.log(sumOfNumber)
 
 
 
-// Push , pop, shift, unshift
+// Push , pop, shift, unshift   ------ МУТИРУЮЩИЕ МЕТОДЫ
 
 const peaple = ['Dima', 'Julya', 'Tanya']
 
