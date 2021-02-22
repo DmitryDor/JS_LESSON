@@ -106,4 +106,3 @@ console.log(getMaxValue1([2, -16, 8, -5, 24, 3, 7]))
 
 
 
-
