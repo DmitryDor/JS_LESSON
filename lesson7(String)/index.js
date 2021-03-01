@@ -116,3 +116,5 @@ const calc = expession => {
 }
 console.log(calc('2 + 4'))
 
+
+

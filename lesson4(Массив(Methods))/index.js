@@ -81,7 +81,16 @@ const getMessagesForPassedStudent = (allStudents, failStudents) => {
 console.log(getMessagesForPassedStudent(['Ann', 'Bob', 'Len', 'Sof'], ['Bob', 'Sof']));
 
 
-
+const getEvenNumber = num => {
+    const arr = []
+    for (let el of num) {
+        if (el % 2 === 0) {
+            arr.push(el)
+        }
+    }
+    return arr
+}
+console.log(getEvenNumber([1, 7, 6, 8, 7]))
 
 
 
