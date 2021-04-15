@@ -158,29 +158,138 @@ function dutyFree(normPrice, discount, hol) {
 
 dutyFree(12, 50, 1000)
 
+// Ваши входные данные: положительное целое число n, большее или равное единице. n предоставляется, у вас НЕТ КОНТРОЛЯ над его значением.
+//
+// Ожидаемый результат - это массив положительных целых чисел от 1 до n (включительно).
+//
+// Ваша задача - написать алгоритм, который проведет вас от входа к выходу.
+
+
+function preFizz(n) {
+    let arr = []
+    for (let i = 1; i <= n; i++) {
+        arr.push(i)
+    }
+    return arr
+}
+
+//Я хотел бы передать массив с двумя элементами в мою функцию swapValues, чтобы поменять местами значения. Однако похоже, что значения не меняются.
+//
+// Вы можете понять, что здесь не так?
+
+
+function swapValues(arr) {
+    return arr.reverse();
+}
+
+
+//Дети пьют тодди.
+// Подростки пьют кокаин.
+// Молодые люди пьют пиво.
+// Взрослые пьют виски.
+// Сделайте функцию, которая получает возраст и возвращает то, что они пьют.
+//
+// Правила:
+//
+// Детский до 14 лет.
+// Подростки до 18 лет.
+// Молодые до 21 года.
+// Взрослым от 21 года.
+
+function peopleWithAgeDrink(old) {
+    if (old <= 13) {
+        return "drink toddy"
+    }
+    if (old >= 14 && old < 18) {
+        return "drink coke"
+    }
+    if (old >= 18 && old < 21) {
+        return "drink beer"
+    }
+    if (old >= 21) {
+        return "drink whisky"
+    }
+};
+
+
+// Напишите функцию gooseFilter / goose-filter / goose_filter / GooseFilter, которая принимает массив строк в качестве аргумента и возвращает отфильтрованный массив, содержащий те же элементы, но с удаленными «гусями».
+//
+// Гуси - это любые строки в следующем массиве, который предварительно заполняется в вашем решении:
+// Элементы в возвращаемом массиве должны быть в том же порядке, что и в исходном массиве, переданном вашей функции, хотя и без «гусей». Обратите внимание, что все строки будут в том же регистре, что и предоставленные, и некоторые элементы могут повторяться.
+
+function gooseFilter(birds, geese) {
+    let resArr = [...birds, ...geese]
+    let uniq = resArr => [...new Set(resArr)];   //  //   НЕ ЗАКОНЧЕНАААААААААА
+
+};
+
+gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"], ["Mallard", "Hook Bill", "Crested", "Blue Swedish"])
+
+
+//Implement a function named generateRange(min, max, step), which takes three arguments and generates a range of integers from min to max, with the step. The first integer is the minimum value, the second is the maximum of the range and the third is the step. (min < max)
+
+function generateRange(min, max, step) {
+    let result = []
+    for (let i = min; i <= max; i = i + step) {
+        result.push(i)
+    }
+    return result
+}
+
+
+// Боб работает водителем автобуса. Однако он стал чрезвычайно популярным среди жителей города. Когда так много пассажиров хотят сесть в его автобус, ему иногда приходится сталкиваться с проблемой нехватки места в автобусе! Он хочет, чтобы вы написали простую программу, сообщающую ему, сможет ли он вместить всех пассажиров. Обзор задачи:
+//   Вам нужно написать функцию, которая принимает три параметра:
+/*    cap - это количество людей, которое может вместить автобус, за исключением водителя.
+    on - это количество людей в автобусе без водителя.
+    wait - это количество людей, ожидающих сесть в автобус, за исключением водителя.
+    Если места достаточно, верните 0, а если его нет, верните количество пассажиров, которых он не может взять.*/
+
+// cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+// cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+//
+function enough(cap, on, wait) {
+    return wait > (cap - on) ? wait - (cap - on) : 0
+}
+
+
+const enough1 = (cap, on, wait) => {
+    (wait > (cap - on) ? wait - (cap - on) : 0)
+}
+
+// Иногда мне нужно быстро преобразовать мили на британский галлон в километры на литр.
+//
+// Создайте приложение, которое будет отображать количество километров на литр (вывод) на основе количества миль на британский галлон (ввод).
+//
+// Обязательно округлите результат до двух десятичных знаков. Если ответ заканчивается на 0, его следует округлить без 0. Таким образом, вместо 5,50 мы должны получить 5,5.
+//
+// Некоторые полезные ассоциации, относящиеся к этому ката: 1 британский галлон = 4,54609188 литров 1 миля = 1,609344 километра
+
+function converter(mpg) {
+    //code to convert miles per imperial gallon to kilometers per liter   //   НЕ ЗАКОНЧЕНАААААААААА
+}
+
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+//
+// The output should be two capital letters with a dot separating them.
+//
+// It should look like this:
+//
+// Sam Harris => S.H
+//
+// Patrick Feeney => P.F
 
 
 
+function abbrevName(name) {
+    let letters = [];
+    const b = name.split` `
+    b.forEach((el, i) => letters.push(el[0]))
+    return letters.join('.').toUpperCase()
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(abbrevName('Dima Doroshenko'));
 
 
 
